@@ -20,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@src/components/ui/select";
+import { useNavigate } from "react-router-dom";
 
 const formSchema = z.object({
   name: z.string().min(1, {
@@ -53,6 +54,8 @@ const userTargetData = [
   { id: 5, name: "Professional" },
 ];
 export const UserPreference: React.FC = () => {
+  const navigate = useNavigate();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -62,9 +65,9 @@ export const UserPreference: React.FC = () => {
     },
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
+    navigate("/");
   };
 
   return (
