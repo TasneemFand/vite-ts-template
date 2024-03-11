@@ -3,7 +3,7 @@ import { Button } from "@src/components/ui/button";
 
 export const Hero: React.FC = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white h-[100vh]">
       <header className="absolute inset-x-0 top-0 z-50 w-full">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
@@ -21,8 +21,8 @@ export const Hero: React.FC = () => {
         </nav>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div className="relative isolate px-6 pt-6 lg:px-8">
+        <div className="mx-auto max-w-2xl py-40 max-sm:py-32">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Data to enrich your online business
