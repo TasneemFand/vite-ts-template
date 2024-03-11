@@ -1,12 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
+import { UserLayout } from "@pages/user/layout";
+import { UserPreference } from "@pages/user/page";
 
 export const router = createBrowserRouter([
   {
-    element: <></>,
+    element: <UserLayout />,
     children: [
       {
-        path: "login",
-        element: <div>login</div>,
+        path: "userpreference",
+        element: <UserPreference />,
       },
     ],
   },
